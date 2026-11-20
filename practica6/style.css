@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+}
+
+/* ---------- Contenedor principal ---------- */
+.contenedor {
+  margin: 50px;
+  padding: 50px;
+  background-color: #ffffff;
+  min-height: 400px;
+  display: flex;
+  gap: 20px;
+}
+
+/* ---------- Cajas ---------- */
+.caja {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.rojo {
+  background-color: red;
+}
+
+.amarillo {
+  background-color: yellow;
+}
+
+.verde {
+  background-color: green;
+}
+
+/* ---------- Botón volver ---------- */
+.volver {
+  display: block;
+  width: 300px;
+  margin: 0 auto 50px auto;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #ffffff;
+  color: #111;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.volver:hover {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+/* ---------- Niveles ---------- */
+
+/* Nivel 1: solo la caja roja, centrada horizontalmente */
+.nivel1 {
+  justify-content: center;
+}
+.nivel1 .amarillo,
+.nivel1 .verde {
+  display: none;
+}
+
+/* Nivel 2: solo la caja roja, al final del eje principal */
+.nivel2 {
+  justify-content: flex-end;
+}
+.nivel2 .amarillo,
+.nivel2 .verde {
+  display: none;
+}
+
+/* Nivel 3: inicio horizontal, centro vertical */
+.nivel3 {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Nivel 4: inicio horizontal, abajo */
+.nivel4 {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* Nivel 5: centro absoluto */
+.nivel5 {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Nivel 6: separadas, abajo */
+.nivel6 {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* Nivel 7: columna desde arriba */
+.nivel7 {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Nivel 8: orden invertido, arriba a la derecha */
+.nivel8 {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Nivel 9: columna pegada abajo */
+.nivel9 {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Nivel 10: orden invertido, centro absoluto */
+.nivel10 {
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Nivel 11: columna invertida, centrada horizontalmente */
+.nivel11 {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Nivel 12: abajo a la derecha */
+.nivel12 {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* Nivel 13: columna centrada, espacio entre cajas */
+.nivel13 {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nivel 14: espacio alrededor, centradas verticalmente */
+.nivel14 {
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Nivel 15: columna, cada caja con su propia alineación */
+.nivel15 {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.nivel15 .rojo {
+  align-self: flex-start;
+}
+.nivel15 .amarillo {
+  align-self: center;
+}
+.nivel15 .verde {
+  align-self: flex-end;
+}
+
+/* ---------- Página principal ---------- */
+.principal {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 450px;
+  background-color: transparent;
+  padding: 0;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.titulo::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #0d5ebd;
+  margin: 12px auto 0 auto;
+}
+
+.datos {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border-left: 4px solid #0d5ebd;
+  border-radius: 6px;
+  padding: 25px 20px;
+  gap: 20px 0;
+}
+
+.dato {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dato span {
+  font-size: 9px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.dato strong {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.niveles h2 {
+  font-size: 14px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+}
+
+.lista-niveles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
+  padding: 0 14px;
+}
+
+.lista-niveles a {
+  width: 100px;
+  padding: 8px 0;
+  text-align: center;
+  background-color: #ffffff;
+  color: #111;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.lista-niveles a:hover,
+.lista-niveles a.activo {
+  background-color: #1976d2;
+  color: #ffffff;
+}

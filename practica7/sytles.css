@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #e0e0e0;
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+}
+
+.contenedor {
+  display: grid;
+  margin: 50px;
+  padding: 50px;
+  gap: 20px;
+  height: 400px;
+  background-color: #ffffff;
+}
+
+
+.caja {
+  border-radius: 10px;
+}
+
+.rojo {
+  background-color: red;
+}
+
+.amarillo {
+  background-color: yellow;
+}
+
+.verde {
+  background-color: green;
+}
+
+
+.volver {
+  display: block;
+  width: 300px;
+  margin: 0 auto 50px auto;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #ffffff;
+  color: #111;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.volver:hover {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
+
+
+.nivel1 {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.nivel2 {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+.nivel3 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.nivel3 .rojo {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.nivel3 .amarillo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.nivel3 .verde {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
+.nivel4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.nivel4 .rojo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.nivel4 .amarillo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.nivel4 .verde {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
+.nivel5 {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.nivel5 .rojo {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.nivel5 .amarillo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.nivel5 .verde {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.nivel6 {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
+}
+.nivel6 .rojo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.nivel6 .amarillo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.nivel6 .verde {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
+.nivel7 {
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 2fr;
+}
+.nivel7 .rojo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.nivel7 .amarillo {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.nivel7 .verde {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+
+.nivel8 .rojo,
+.nivel9 .rojo,
+.nivel10 .rojo,
+.nivel11 .rojo,
+.nivel12 .rojo {
+  grid-area: rojo;
+}
+.nivel8 .amarillo,
+.nivel9 .amarillo,
+.nivel10 .amarillo,
+.nivel11 .amarillo,
+.nivel12 .amarillo {
+  grid-area: amarillo;
+}
+.nivel8 .verde,
+.nivel9 .verde,
+.nivel10 .verde,
+.nivel11 .verde,
+.nivel12 .verde {
+  grid-area: verde;
+}
+
+.nivel8 {
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas:
+    "rojo rojo"
+    "amarillo verde";
+}
+
+
+.nivel9 {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "rojo amarillo"
+    "rojo verde";
+}
+
+
+.nivel10 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "rojo amarillo"
+    "verde verde";
+}
+
+
+.nivel11 {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "rojo verde"
+    "amarillo verde";
+}
+
+
+.nivel12 {
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 4fr 1fr;
+  grid-template-areas:
+    "rojo verde"
+    "amarillo amarillo";
+}
+
+.principal {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  align-content: start;
+  gap: 30px;
+  height: auto;
+  min-height: 450px;
+  padding: 0;
+  background-color: transparent;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.titulo::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #0d5ebd;
+  margin: 12px auto 0 auto;
+}
+
+.datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 0;
+  background-color: #ffffff;
+  border-left: 4px solid #0d5ebd;
+  border-radius: 6px;
+  padding: 25px 20px;
+}
+
+.dato {
+  display: grid;
+  gap: 4px;
+}
+
+.dato span {
+  font-size: 9px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.dato strong {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.niveles h2 {
+  font-size: 14px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+}
+
+.lista-niveles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  gap: 10px;
+  padding: 0 14px;
+}
+
+.lista-niveles a {
+  padding: 8px 0;
+  text-align: center;
+  background-color: #ffffff;
+  color: #111;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.lista-niveles a:hover,
+.lista-niveles a.activo {
+  background-color: #1976d2;
+  color: #ffffff;
+}
+
